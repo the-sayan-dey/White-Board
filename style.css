@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon{
+    height: 17px;
+    width: 17px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #EFBC9B;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1500px;
+    /* border: 3px solid black; */
+}
+
+section{
+    background-color: #fff;
+
+}
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0;
+
+
+    border: 5px solid black;
+    box-shadow: 10px 10px;
+    background-color: #f0f3e6;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.option:is(:hover, :active) :where(span, label){
+    color: rgb(13, 75, 150);
+}
+
+.option :where(span, label){
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.option #fill-color{
+    height: 14px;
+    width: 14px;
+    cursor: pointer;
+}
+
+#fill-color:checked ~ label{
+    color: rgb(13, 75, 150);
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .option:nth-child(1){
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.colors .option:nth-child(2){
+    background-color: #000000;
+}
+
+.colors .option:nth-child(3){
+    background-color: #ff0000;
+}
+
+.colors .option:nth-child(4){
+    background-color: #12ad0c;
+}
+
+.colors .option:nth-child(5){
+    background-color: #0e18e3;
+}
+
+.colors .option.selected::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: inherit;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas{
+    background-color: red;
+}
+
+.buttons .save-img{
+    background-color: green;
+}
+
+.buttons .undo{
+    background-color: rgb(247, 255, 3);
+    color: black;
+}
+
+.buttons .redo{
+    background-color: rgb(171, 14, 198);
+}
+
+.drawing-board{
+    /* width: 100%; */
+    border: 5px solid black;
+    box-shadow: 10px 10px;
+    flex: 1;
+}
+
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+
+
+}
